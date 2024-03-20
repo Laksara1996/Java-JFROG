@@ -30,7 +30,8 @@ repositories {
         name = "test-jfrog" //  optional target repository name
         url = "https://tesjfrog.jfrog.io/artifactory/test-jfrog-libs-snapshot"
         credentials {
-//            username = "<USERNAME>"
+            username = System.getenv('ORG_GRADLE_PROJECT_JFROG_USER_NAME')
+            password = System.getenv('ORG_GRADLE_PROJECT_JFROG_PASSWORD')
         }
     }
 }
