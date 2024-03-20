@@ -30,8 +30,8 @@ repositories {
         name = "test-jfrog" //  optional target repository name
         url = "https://tesjfrog.jfrog.io/artifactory/test-jfrog-libs-snapshot"
         credentials {
-            username = "laksaragayal1996@gmail.com"
-            password = "AKCpBsdYtYJgxFSgEKyRmiv1cqw5fs5wQoWAVt8gF7y6xt7HEnTQzu9pmEeD6RDJBEimefhAK"
+            username = "USERNAME"
+            password = "PASSWORD"
         }
     }
 }
