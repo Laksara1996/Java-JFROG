@@ -67,7 +67,6 @@ publishing {
             url = "https://tesjfrog.jfrog.io/artifactory/test-jfrog-libs-snapshot"
             credentials {
 //                username = "<USERNAME>"
-//                password = "<PASSWORD>"
             }
         }
     }
