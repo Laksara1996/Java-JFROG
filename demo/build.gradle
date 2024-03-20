@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.3'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'test.jfrogUse'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'test.jfrog:plugin-test:0.0.1-20240320.063843-6'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+repositories {
+    maven {
+        name = "test-jfrog" //  optional target repository name
+        url = "https://tesjfrog.jfrog.io/artifactory/test-jfrog-libs-snapshot"
+        credentials {
+            username = "laksaragayal1996@gmail.com"
+            password = "AKCpBsdYtYJgxFSgEKyRmiv1cqw5fs5wQoWAVt8gF7y6xt7HEnTQzu9pmEeD6RDJBEimefhAK"
+        }
+    }
+}
